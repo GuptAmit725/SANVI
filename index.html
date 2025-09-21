@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANVI - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .notification {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .email-form {
+            display: flex;
+            max-width: 400px;
+            margin: 1rem auto;
+            gap: 0.5rem;
+        }
+        
+        .email-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .notify-btn {
+            padding: 0.8rem 1.5rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .notify-btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .social-links {
+            margin-top: 2rem;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 3rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">SANVI</div>
+        <div class="tagline">Sales Analytics and Vendor Intelligence</div>
+        <div class="description">
+            Transforming the way shopkeepers manage sales, track debts, and understand customer behavior. 
+            Coming soon to help businesses make data-driven decisions.
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>📊 Sales Analytics</h3>
+                <p>Track daily sales, payment patterns, and business performance</p>
+            </div>
+            <div class="feature">
+                <h3>💳 Debt Management</h3>
+                <p>Monitor outstanding payments and customer credit efficiently</p>
+            </div>
+            <div class="feature">
+                <h3>🎯 Smart Predictions</h3>
+                <p>AI-powered insights to predict customer purchase patterns</p>
+            </div>
+        </div>
+        
+        <div class="notification">
+            <h3>Get Notified When We Launch</h3>
+            <p>Be among the first to experience the future of retail management</p>
+            <form class="email-form" onsubmit="handleSubmit(event)">
+                <input type="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="notify-btn">Notify Me</button>
+            </form>
+        </div>
+        
+        <div class="social-links">
+            <a href="mailto:contact@mysanvi.in">📧 Contact Us</a>
+            <a href="tel:+91-XXXXXXXXXX">📞 Call Us</a>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('.email-input').value;
+            alert('Thank you! We\'ll notify you at ' + email + ' when SANVI launches.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>
